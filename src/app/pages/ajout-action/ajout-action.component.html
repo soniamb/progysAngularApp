@@ -1,4 +1,16 @@
 <br>
+<div class="btn-group" style="margin-left:78%">
+  <button  data-toggle="dropdown" class="btn btn-outline btn-primary"> Action <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li>
+      <button class="btn btn-outline btn-primary"  style="margin-left: 35px; margin-top: 5px"> Ajouter </button>
+    </li>
+    <li>
+      <button class="btn btn-outline btn-primary"  style="margin-left: 35px; margin-top: 5px"> Fermer </button>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</div>
 <div class="row">
   <div class="col-lg-2">
     <label > Code </label>
@@ -11,7 +23,7 @@
 <div class="input-group mb-3">
   <div class="input-group-prepend" >
     <label class="input-group-text" for="inputGroupSelect01"> Type </label>
-  <select class="custom-select" id="inputGroupSelect01" style="margin-left: 140px; width: 230px ">
+  <select class="custom-select" id="inputGroupSelect01" style="margin-left: 66%; width: 230px ">
     <option selected> </option>
     <option value="1">AMELIORATION</option>
     <option value="2">AMELIORATION</option>
@@ -118,6 +130,40 @@
     </div>
   </div>
 </div>
+<!-- detail-action -->
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand"> Détail Action.. </a>
+</nav>
+<div class="btn-group" style="margin-left:78%">
+  <button data-toggle="dropdown" class="btn btn-outline btn-primary"> Détail-Action <span class="caret"></span></button>
+
+  <ul class="dropdown-menu">
+    <li>
+      <button class="btn btn-outline btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="margin-left: 12px; margin-top: 5px">Ajouter</button>
+    </li>
+    <li>
+      <button class="btn btn-outline btn-primary"  data-toggle="modal" data-target="#exampleModalCenter" style="margin-left: 12px; margin-top: 5px"> Modifier </button>
+    </li>
+    <li>
+      <button class="btn btn-outline btn-primary"  style="margin-left: 12px; margin-top: 5px">Supprimer</button>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</div>
+<div class="ibox-content" style="margin-bottom:15px; margin-top: 10px" >
+  <table class="table table-hover no-margins">
+    <thead>
+    <tr>
+      <th> Libelle Action </th>
+      <th> Type </th>
+      <th> Responsable </th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <a class="navbar-brand"> Cloture de l'action.. </a>
 </nav>
@@ -150,23 +196,71 @@
   </div>
 </div>
 <br>
+<!--Document-joint -->
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <a class="navbar-brand"> Documents joints.. </a>
 </nav>
 <div class="btn-group" style="margin-left:78%">
-  <button  data-toggle="dropdown" class="btn btn-outline btn-primary" > Document <span class="caret"></span></button>
+  <button  data-toggle="dropdown" class="btn btn-outline btn-primary"> Document <span class="caret"></span></button>
   <ul class="dropdown-menu">
     <li>
-      <a href="#">Ajouter</a>
+      <button class="btn btn-outline btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="margin-left: 12px; margin-top: 5px">Ajouter</button>
     </li>
-    <li><a href="#" class="font-bold">Modifier</a></li>
-    <li><a href="#">Supprimer</a></li>
+    <li>
+      <button class="btn btn-outline btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="margin-left: 12px; margin-top: 5px"> Modifier </button>
+    </li>
+    <li>
+      <button class="btn btn-outline btn-primary"  style="margin-left: 12px; margin-top: 5px">Supprimer</button>
+    </li>
     <li class="divider"></li>
   </ul>
 </div>
+<!-- Modal document-joint -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Document joint</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="document-name" class="col-form-label"> Nom Document</label>
+            <input type="text" class="form-control" id="document-name">
+          </div>
+          <div class="form-group">
+            <label for="objet-text" class="col-form-label">Objet</label>
+            <textarea class="form-control" id="objet-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="date-creation" class="col-form-label"> Date de Création</label>
+            <input type="text" class="form-control" id="date-creation">
+          </div>
+          <div class="form-group">
+            <label for="observation-text" class="col-form-label">Observation</label>
+            <textarea class="form-control" id="observation-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label  class="col-form-label">Fichier</label>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="customFile">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Fermer </button>
+        <button type="button" class="btn btn-primary"> Ajouter </button>
+      </div>
+    </div>
+  </div>
+</div>
 <br>
 <br>
-<div class="ibox-content" style="margin-bottom: 150px" >
+<div class="ibox-content" style="margin-bottom:50px" >
   <table class="table table-hover no-margins">
     <thead>
     <tr>
@@ -178,6 +272,305 @@
     </tbody>
   </table>
 </div>
-<h3> ok </h3>
-<h3>looool </h3>
+<!-- Modal detail-action -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"> Détail Action ... </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Accordion list-->
+        <div id="accordion" class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> ACTION </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+              <div class="panel-body">
+
+                <!-- West list loula -->
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Numero </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend" >
+                    <label class="input-group-text" for="inputGroupSelect01" style="margin-left: 10px"> Type </label>
+                    <select class="custom-select" id="inputGroupSelect05" style="margin-left: 57%; width: 230px ">
+                      <option selected> </option>
+                      <option value="1">AMELIORATION</option>
+                      <option value="2">AMELIORATION</option>
+                      <option value="3">AMELIORATION</option>
+                    </select>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Action </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <textarea rows="3" style="width: 230px"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Observation </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <textarea rows="3" style="width: 230px"></textarea>
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend" >
+                    <label class="input-group-text" for="inputGroupSelect01" style="margin-left: 10px"> Resp. Réalisation </label>
+                    <select class="custom-select" id="inputGroupSelect06" style="margin-left: 35px; width: 230px ">
+                      <option selected> </option>
+                      <option value="1">user1</option>
+                      <option value="2">user2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Date debut réelle </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="date">
+                  </div>
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Date Prev Début</label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="date">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Date fin Réalisée</label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="date">
+                  </div>
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px"> Date Prev Fin</label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="date">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Réalisation </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <textarea rows="3" style="width: 230px"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px"> Observation Réalisation </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <textarea rows="3" style="width: 230px"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Suivi Realisation</a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label class="input-group-text" for="inputGroupSelect01" style="margin-left: 10px" > Resp. Suivi </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <select class="custom-select" id="inputGroupSelect07" style="width: 100px">
+                      <option selected> </option>
+                      <option value="1">user1</option>
+                      <option value="2">user2</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px"> Date de Suivi </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="date">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px"> Taux de Réalisation </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                  </div>
+                  <div class="col-lg-3">
+                    <label class="input-group-text" for="inputGroupSelect01" style="margin-left: 10px" > Etat Action </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <select class="custom-select" id="inputGroupSelect08" style="width: 100px">
+                      <option selected> </option>
+                      <option value="1"> Réalisée </option>
+                      <option value="2"> Non Réalisée </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Observation Suivi </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <textarea rows="3" style="width: 230px"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Suivi Efficacite </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label class="input-group-text" for="inputGroupSelect01" style="margin-left: 10px" > Resp. Mesure Eff </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <select class="custom-select" id="inputGroupSelect09" style="width: 100px">
+                      <option selected> </option>
+                      <option value="1">user1</option>
+                      <option value="2">user2</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px"> Date Mesure Eff </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="date">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px"> Taux d'efficacité </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                  </div>
+                  <div class="col-lg-3">
+                    <label class="input-group-text" for="inputGroupSelect01" style="margin-left: 10px" > Etat Efficacite </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <select class="custom-select" id="inputGroupSelect08" style="width: 100px">
+                      <option selected> </option>
+                      <option value="1"> Efficace </option>
+                      <option value="2"> Non Efficace </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Obs. Efficacité </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <textarea rows="3" style="width: 230px"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"> Gestion des couts</a>
+              </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Cout MO Prévisionnel </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                  </div>
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Cout MO Réel</label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Cout Materiel Prévisionnel </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                  </div>
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Cout Materiel Réel</label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Total MO Prévisionnel </label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                  </div>
+                  <div class="col-lg-3">
+                    <label style="margin-left: 10px" > Total MO Réel</label>
+                  </div>
+                  <div class="col-lg-3">
+                    <input class="form-control" type="number">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- fin accordion-->
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<h3>  o </h3>
+
+
+
 
