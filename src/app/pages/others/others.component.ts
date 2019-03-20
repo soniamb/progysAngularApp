@@ -8,5 +8,6 @@ export class OthersComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+
     }
 }

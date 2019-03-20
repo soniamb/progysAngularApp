@@ -17,7 +17,7 @@
                     </a>
                 </div>
                 <div class="logo-element">
-                    SWWCC
+
                 </div>
             </li>
             <li [ngClass]="{active: activeRoute('home')}">
@@ -25,6 +25,9 @@
             </li>
             <li [ngClass]="{active: activeRoute('others')}">
                 <a [routerLink]="['./others']"><i class="fa fa-desktop"></i> <span class="nav-label">Others</span></a>
+            </li>
+            <li [ngClass]="{active: activeRoute('ajout-action')}">
+              <a [routerLink]="['./ajout-action']"><i class="fa fa-desktop"></i> <span class="nav-label">ajout-action</span></a>
             </li>
         </ul>
 

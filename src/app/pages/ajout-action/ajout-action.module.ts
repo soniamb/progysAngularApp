@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
-import {OthersComponent} from "./others.component";
-import {othersRoutes} from "./others.routes";
+import {AjoutActionRoutes} from './ajout-action.routes';
+import {AjoutActionComponent} from './ajout-action.component';
 
 @NgModule({
   imports: [
       CommonModule,
       FormsModule,
-      RouterModule.forChild(othersRoutes)
+      RouterModule.forChild(AjoutActionRoutes)
   ],
   declarations: [
-      OthersComponent
+      AjoutActionComponent
   ],
 })
-export class OthersModule {  }
+export class AjoutActionModule {  }

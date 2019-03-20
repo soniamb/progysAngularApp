@@ -9,21 +9,25 @@ import {Navigation} from "./components/navigation/navigation.component";
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./app.routes";
 import {HomeComponent} from "./pages/home/home.component";
+import {ActionServiceService} from './services/actions/action-service.service';
+import {HttpClientModule} from '@angular/common/http';
+import { AjoutActionComponent } from './pages/ajout-action/ajout-action.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Navigation,
     Topnavbar,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ActionServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

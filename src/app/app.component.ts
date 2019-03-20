@@ -8,9 +8,9 @@ import {Login} from "./models/login";
 })
 export class AppComponent {
   loginInfo:Login = {
-      first_name:'Andrew',
-      last_name:'Yang',
+      first_name:'Sonia',
+      last_name:'Mbaya',
       avatar:'ay.jpeg',
-      title:'Senior Developer'
+      title:'ingénieur développeur'
   };
 }

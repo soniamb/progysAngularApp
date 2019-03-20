@@ -1,4 +1,5 @@
 import {HomeComponent} from "./pages/home/home.component";
+import {AjoutActionModule} from './pages/ajout-action/ajout-action.module';
 
 export const appRoutes=[
     {
@@ -13,5 +14,9 @@ export const appRoutes=[
     {
         path: 'others',
         loadChildren:'./pages/others/others.module#OthersModule',
+    },
+    {
+        path: 'ajout-action',
+        loadChildren:'./pages/ajout-action/ajout-action.module#AjoutActionModule',
     },
 ];
