@@ -55,7 +55,6 @@
                             </div>
                         </div>
 
-
                         <div class="ibox-content" *ngIf="actions">
                             <table class="table table-hover no-margins">
                                 <thead>
@@ -71,7 +70,7 @@
                                 <tr *ngFor="let action of actions">
                                     <td><small></small>{{action.id}}</td>
                                     <td>{{action.categorie}}</td>
-                                    <td>{{action.date_creation}}</td>
+                                    <td>{{action.date_creation | date:'dd MMM yyyy  HH:mm:ss'}}</td>
                                     <td>{{action.desc_prob}}</td>
                                     <td>{{action.code_origine}}</td>
                                 </tr>
@@ -82,7 +81,6 @@
                 </div>
             </div>
         </div>
-
 
     </div>
 </div>

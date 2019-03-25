@@ -3,10 +3,10 @@
   <button  data-toggle="dropdown" class="btn btn-outline btn-primary"> Action <span class="caret"></span></button>
   <ul class="dropdown-menu">
     <li>
-      <button class="btn btn-outline btn-primary"  style="margin-left: 35px; margin-top: 5px"> Ajouter </button>
+      <button class="btn btn-outline btn-primary"  style="margin-left: 35px; margin-top: 5px" (click)="addAction()"> Ajouter </button>
     </li>
     <li>
-      <button class="btn btn-outline btn-primary"  style="margin-left: 35px; margin-top: 5px"> Fermer </button>
+      <button [routerLink]="['../home']" class="btn btn-outline btn-primary"  style="margin-left: 35px; margin-top: 5px"> Fermer </button>
     </li>
     <li class="divider"></li>
   </ul>
@@ -16,7 +16,7 @@
     <label > Code </label>
   </div>
   <div class="col-lg-3">
-    <input class="form-control" type="text">
+    <input [(ngModel)]="action.code" class="form-control" type="text" >
   </div>
 </div>
 <br>
@@ -27,11 +27,11 @@
     <label class="input-group-text" for="inputGroupSelect01"> Type </label>
     </div>
     <div class="col-lg-6" style="margin-left: 175px">
-  <select class="custom-select" id="inputGroupSelect01" style="width: 230px ">
+  <select [(ngModel)]="action.type" class="custom-select" id="inputGroupSelect01" style="width: 230px ">
     <option selected> </option>
-    <option value="1">AMELIORATION</option>
-    <option value="2">AMELIORATION</option>
-    <option value="3">AMELIORATION</option>
+    <option value="AMELIORATION">AMELIORATION</option>
+    <option value="VERIFICATION">VERIFICATION</option>
+    <option value="AUTRE">AUTRE</option>
   </select>
     </div>
   </div>
@@ -43,7 +43,7 @@
     <label > Categorie </label>
   </div>
   <div class="col-lg-3">
-    <input class="form-control" type="text">
+    <input [(ngModel)]="action.categorie" class="form-control" type="text">
   </div>
 
 </div>
@@ -53,7 +53,7 @@
     <label > Priorite </label>
   </div>
   <div class="col-lg-3">
-    <input class="form-control" type="text">
+    <input [(ngModel)]="action.priorite" class="form-control" type="text">
   </div>
 </div>
 <br>
@@ -64,22 +64,15 @@
     <label class="input-group-text" for="inputGroupSelect01"> Demandeur </label>
     </div>
     <div class="col-lg-3">
-    <select class="custom-select" id="inputGroupSelect02" style="margin-left: 95px; width: 230px ">
+    <select [(ngModel)]="action.demandeur" class="custom-select" id="inputGroupSelect02" style="margin-left: 95px; width: 230px ">
       <option selected> </option>
-      <option value="1">user</option>
-      <option value="2">user</option>
+      <option value="Test 1">Test 1</option>
+      <option value="Test 2">Test 2</option>
+      <option value="Test 3">Test 3</option>
     </select>
     </div>
   </div>
 </div>
-</div>
-<div class="row">
-  <div class="col-lg-2">
-    <label > Date de Creation </label>
-  </div>
-  <div class="col-lg-3">
-    <input class="form-control" type="date">
-  </div>
 </div>
 <br>
 <div class="row">
@@ -87,7 +80,7 @@
     <label > Description Probleme </label>
   </div>
   <div class="col-lg-3">
-    <textarea rows="3" style="width: 230px"></textarea>
+    <textarea [(ngModel)]="action.desc_prob" rows="3" style="width: 230px"></textarea>
   </div>
 </div>
 <br>
@@ -96,7 +89,7 @@
     <label > Code Origine </label>
   </div>
   <div class="col-lg-3">
-    <input class="form-control" type="text">
+    <input [(ngModel)]="action.code_origine" class="form-control" type="text">
   </div>
 </div>
 <br>
@@ -105,7 +98,7 @@
     <label > Provient De </label>
   </div>
   <div class="col-lg-3">
-    <input class="form-control" type="text">
+    <input [(ngModel)]="action.prov_de" class="form-control" type="text">
   </div>
 </div>
 <br>
@@ -114,7 +107,7 @@
     <label > Analyse des causes </label>
   </div>
   <div class="col-lg-3">
-    <textarea rows="3" style="width: 230px"></textarea>
+    <textarea [(ngModel)]="action.analy_causes" rows="3" style="width: 230px"></textarea>
   </div>
 </div>
 <br>

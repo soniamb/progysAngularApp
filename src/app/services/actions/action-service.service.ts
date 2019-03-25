@@ -13,6 +13,10 @@ export class ActionServiceService {
     return this.http.get(this.baseUrl + 'allActions');
   }
 
+  addAction(data){
+    return this.http.post(this.baseUrl+'addAction',data);
+  }
+
 
 
 }
